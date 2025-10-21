@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="icons-1.11.3\font\bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="fontawesome6/pro/css/all.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css\style.css" />
+    <title>Web Development Quiz</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="start_btn">
+        <button onclick="displayRules()">Start Quiz</button>
+      </div>
+      <section class="info_box" id="rules">
+        <h1 class="info_title">Rules and Regulations</h1>
+        <div class="info_list">
+          <ol>
+            <li>
+              <p class="info">
+                You will be given a total of
+                <span>3 Minutes</span> to attempt all questions
+              </p>
+            </li>
+            <li>
+              <p class="info">
+                Once the time exhausts its limit, the quiz will automatically be
+                ended and the result will automatically be submitted
+              </p>
+            </li>
+            <li>
+              <p class="info">
+                There will be no going back once the quiz starts
+              </p>
+            </li>
+            <li>
+              <p class="info">
+                You cannot choose more than one option at a time.
+              </p>
+            </li>
+            <li>
+              <p class="info">You'll get 1 point for each correct answer</p>
+            </li>
+            <li>
+              <p class="info">Enjoy your Quiz</p>
+            </li>
+          </ol>
+        </div>
+        <div class="buttons">
+          <button class="exit" onclick="hideRules()">Exit Quiz</button>
+          <button class="continue" onclick="showQuiz()">Continue</button>
+        </div>
+      </section>
+      <section class="quiz_box" id="quiz_box">
+        <header>
+          <p class="title">Quiz Application</p>
+          <section class="timer">
+            <p class="time_text">Time Left</p>
+            <p class="timer_set" id="time"></p>
+          </section>
+        </header>
+        <div class="progress_bar">
+          <p class="progress_fill" id="progress_fill"></p>
+        </div>
+        <section class="questions">
+          <section class="question question1 animate__animated">
+            <p class="question_text">
+              Which of the following is the latest version of HTML?
+            </p>
+            <form class="option_list">
+              <p class="option">
+                <input type="radio" name="question1" id="radiobutton1" />
+                <label for="radiobutton1"> HTML4 </label>
+              </p>
+              <p class="option">
+                <input type="radio" name="question1" id="radiobutton2" />
+                <label for="radiobutton2"> HTML8</label>
+              </p>
+              <p class="option">
+                <input type="radio" name="question1" id="radiobutton3" />
+                <label for="radiobutton3">HTML4</label>
+              </p>
+              <p class="option">
+                <input
+                  type="radio"
+                  name="question1"
+                  id="radiobutton4"
+                  class="correctOption"
+                />
+                <label for="radiobutton4"> HTML5</label>
+              </p>
+            </form>
+          </section>
+          <section class="question question2 animate__animated">
+            <p class="question_text">What is CSS?</p>
+            <form class="option_list">
+              <p class="option">
+                <input type="radio" name="question2" id="radiobutton5" />
+                <label for="radiobutton5"> Collapsing Styles Stack</label>
+              </p>
+              <p class="option">
+                <input
+                  type="radio"
+                  name="question2"
+                  id="radiobutton6"
+                  class="correctOption"
+                />
+                <label for="radiobutton6"> Cascading Style Sheets</label>
+              </p>
+              <p class="option">
+                <input type="radio" name="question2" id="radiobutton7" />
+                <label for="radiobutton7"> Converging Style Sheets</label>
+              </p>
+              <p class="option">
+                <input type="radio" name="question2" id="radiobutton8" />
+
+                <label for="radiobutton8"> Combined Source Styler</label>
+              </p>
+            </form>
+          </section>
+          <section class="question question3 animate__animated">
+            <p class="question_text">Which language runs in a web browser?</p>
+            <form class="option_list">
+              <p class="option">
+                <input type="radio" name="question3" id="radiobutton9" />
+                <label for="radiobutton9">Java</label>
+              </p>
+
+              <p class="option">
+                <input type="radio" name="question3" id="radiobutton10" />
+                <label for="radiobutton10">C</label>
+              </p>
+              <p class="option">
+                <input type="radio" name="question3" id="radiobutton11" />
+                <label for="radiobutton11"> Python</label>
+              </p>
+              <p class="option">
+                <input
+                  type="radio"
+                  name="question3"
+                  id="radiobutton12"
+                  class="correctOption"
+                />
+                <label for="radiobutton12"> JavaScript</label>
+              </p>
+            </form>
+          </section>
+          <section class="question question4 animate__animated">
+            <p class="question_text">What does HTML stand for?</p>
+            <form class="option_list">
+              <p class="option">
+                <input
+                  type="radio"
+                  name="question4"
+                  id="radiobutton13"
+                  class="correctOption"
+                />
+                <label for="radiobutton13"> HyperText Markup Language</label>
+              </p>
+
+              <p class="option">
+                <input type="radio" name="question4" id="radiobutton14" /><label
+                  for="radiobutton14"
+                >
+                  HyperText Markdown Language</label
+                >
+              </p>
+
+              <p class="option">
+                <input type="radio" name="question4" id="radiobutton15" />
+                <label for="radiobutton15">Hyperloop Machine Language</label>
+              </p>
+              <p class="option">
+                <input type="radio" name="question4" id="radiobutton16" />
+                <label for="radiobutton16">
+                  Helicopters Terminals Motorcycles Lamborgini</label
+                >
+              </p>
+            </form>
+          </section>
+          <section class="question question5 animate__animated">
+            <p class="question_text">What year was JavaScript launched?</p>
+            <form class="option_list">
+              <p class="option">
+                <input type="radio" name="question5" id="radiobutton17" />
+                <label for="radiobutton17"> 1996</label>
+              </p>
+              <p class="option">
+                <input
+                  type="radio"
+                  name="question5"
+                  id="radiobutton18"
+                  class="correctOption"
+                />
+                <label for="radiobutton18"> 1995</label>
+              </p>
+              <p class="option">
+                <input type="radio" name="question5" id="radiobutton19" />
+                <label for="radiobutton19"> 1994</label>
+              </p>
+
+              <p class="option">
+                <input type="radio" name="question5" id="radiobutton20" />
+                <label for="radiobutton20"> none of the above</label>
+              </p>
+            </form>
+          </section>
+        </section>
+        <footer>
+          <div class="total_que">
+            <span>
+              <p id="currentNumber">1</p>
+              Of
+              <p id="totalCount">2</p>
+              Questions
+            </span>
+          </div>
+          <div class="buttons" id="buttons">
+            <button
+              title="Previous Question"
+              class="previous button fa fa-chevron-left"
+              id="previous"
+              onclick="previousQuestion()"
+            ></button>
+            <button
+              title="Next Question"
+              class="next button fa fa-chevron-right"
+              id="next"
+              onclick="nextQuestion()"
+            ></button>
+          </div>
+        </footer>
+      </section>
+      <section class="result_box" id="result">
+        <div class="icon">
+          <span class="fa fas" id="result-icon"></span>
+        </div>
+        <p class="complete_text">You've completed the Quiz</p>
+        <div class="score_container">
+          <span id="score_text"></span>
+        </div>
+        <p class="feedback_message" id="feedback_message"></p>
+        <section class="answer_breakdown">
+          <ul id="answer_breakdown"></ul>
+        </section>
+        <div class="buttons">
+          <button class="restart" onclick="showQuiz()">Replay Quiz</button>
+          <button class="quit" onclick="hideResult()">Quit Quiz</button>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
